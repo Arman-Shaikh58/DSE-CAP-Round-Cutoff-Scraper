@@ -1,0 +1,245 @@
+college_code,college_name,cap_round,branch_code,branch_name,cutoff_open,cutoff_ews,cutoff_sebc
+1002,"Government College of Engineering, Amravati",1,100224210,Computer Science and Engineering,94.0,94.9,92.0
+1002,"Government College of Engineering, Amravati",1,100224610,Information Technology,93.16,90.74,90.0
+1002,"Government College of Engineering, Amravati",2,100224210,Computer Science and Engineering,,,
+1002,"Government College of Engineering, Amravati",2,100224610,Information Technology,,,
+1002,"Government College of Engineering, Amravati",3,100224210,Computer Science and Engineering,,,
+1002,"Government College of Engineering, Amravati",3,100224610,Information Technology,,,
+1002,"Government College of Engineering, Amravati",4,100224210,Computer Science and Engineering,,,
+1002,"Government College of Engineering, Amravati",4,100224610,Information Technology,,,
+3012,"Veermata Jijabai Technological Institute(VJTI), Matunga, Mumbai",1,301224510,Computer Engineering,98.59,96.57,97.18
+3012,"Veermata Jijabai Technological Institute(VJTI), Matunga, Mumbai",1,301224610,Information Technology,97.4,95.9,96.86
+3012,"Veermata Jijabai Technological Institute(VJTI), Matunga, Mumbai",2,301224510,Computer Engineering,,,
+3012,"Veermata Jijabai Technological Institute(VJTI), Matunga, Mumbai",2,301224610,Information Technology,,,
+3012,"Veermata Jijabai Technological Institute(VJTI), Matunga, Mumbai",3,301224510,Computer Engineering,,,
+3012,"Veermata Jijabai Technological Institute(VJTI), Matunga, Mumbai",3,301224610,Information Technology,,,
+3012,"Veermata Jijabai Technological Institute(VJTI), Matunga, Mumbai",4,301224510,Computer Engineering,,,
+3012,"Veermata Jijabai Technological Institute(VJTI), Matunga, Mumbai",4,301224610,Information Technology,,,
+4025,"Government College of Engineering, Nagpur",1,402524210,Computer Science and Engineering,92.5,92.29,92.23
+4025,"Government College of Engineering, Nagpur",2,402524210,Computer Science and Engineering,,,
+4025,"Government College of Engineering, Nagpur",3,402524210,Computer Science and Engineering,,,
+4025,"Government College of Engineering, Nagpur",4,402524210,Computer Science and Engineering,,,
+6005,"Government College of Engineering, Karad",1,600524610,Information Technology,93.54,92.86,93.5
+6005,"Government College of Engineering, Karad",2,600524610,Information Technology,,,
+6005,"Government College of Engineering, Karad",3,600524610,Information Technology,,,
+6005,"Government College of Engineering, Karad",4,600524610,Information Technology,,,
+6007,"Walchand College of Engineering, Sangli",1,600721970,Robotics and Automation,93.77,92.17,92.63
+6007,"Walchand College of Engineering, Sangli",1,600724210,Computer Science and Engineering,95.66,96.34,95.63
+6007,"Walchand College of Engineering, Sangli",1,600724270,Computer Science and Engineering,95.26,95.03,95.26
+6007,"Walchand College of Engineering, Sangli",1,600724610,Information Technology,95.26,94.63,95.2
+6007,"Walchand College of Engineering, Sangli",1,600724670,Information Technology,95.2,94.17,95.2
+6007,"Walchand College of Engineering, Sangli",1,600792170,Artificial Intelligence and Machine Learning,95.88,94.18,95.26
+6007,"Walchand College of Engineering, Sangli",2,600721970,Robotics and Automation,,,
+6007,"Walchand College of Engineering, Sangli",2,600724210,Computer Science and Engineering,,,
+6007,"Walchand College of Engineering, Sangli",2,600724270,Computer Science and Engineering,,,
+6007,"Walchand College of Engineering, Sangli",2,600724610,Information Technology,,,
+6007,"Walchand College of Engineering, Sangli",2,600724670,Information Technology,,,
+6007,"Walchand College of Engineering, Sangli",2,600792170,Artificial Intelligence and Machine Learning,,,
+6007,"Walchand College of Engineering, Sangli",3,600721970,Robotics and Automation,,,
+6007,"Walchand College of Engineering, Sangli",3,600724210,Computer Science and Engineering,,,
+6007,"Walchand College of Engineering, Sangli",3,600724270,Computer Science and Engineering,,,
+6007,"Walchand College of Engineering, Sangli",3,600724610,Information Technology,,,
+6007,"Walchand College of Engineering, Sangli",3,600724670,Information Technology,,,
+6007,"Walchand College of Engineering, Sangli",3,600792170,Artificial Intelligence and Machine Learning,,,
+6007,"Walchand College of Engineering, Sangli",4,600721970,Robotics and Automation,,,
+6007,"Walchand College of Engineering, Sangli",4,600724210,Computer Science and Engineering,,,
+6007,"Walchand College of Engineering, Sangli",4,600724270,Computer Science and Engineering,,,
+6007,"Walchand College of Engineering, Sangli",4,600724610,Information Technology,,,
+6007,"Walchand College of Engineering, Sangli",4,600724670,Information Technology,,,
+6007,"Walchand College of Engineering, Sangli",4,600792170,Artificial Intelligence and Machine Learning,,,
+6036,"Government College of Engineering, Kolhapur",1,603624210,Computer Science and Engineering,92.17,86.8,92.57
+6036,"Government College of Engineering, Kolhapur",1,603626310,Artificial Intelligence (AI) and Data Science,92.11,86.18,91.0
+6036,"Government College of Engineering, Kolhapur",1,603661510,Mechanical & Automation Engineering,83.48,70.22,79.41
+6036,"Government College of Engineering, Kolhapur",2,603624210,Computer Science and Engineering,,,
+6036,"Government College of Engineering, Kolhapur",2,603626310,Artificial Intelligence (AI) and Data Science,,,
+6036,"Government College of Engineering, Kolhapur",2,603661510,Mechanical & Automation Engineering,,,
+6036,"Government College of Engineering, Kolhapur",3,603624210,Computer Science and Engineering,,,
+6036,"Government College of Engineering, Kolhapur",3,603626310,Artificial Intelligence (AI) and Data Science,,,
+6036,"Government College of Engineering, Kolhapur",3,603661510,Mechanical & Automation Engineering,,,
+6036,"Government College of Engineering, Kolhapur",4,603624210,Computer Science and Engineering,,,
+6036,"Government College of Engineering, Kolhapur",4,603626310,Artificial Intelligence (AI) and Data Science,,,
+6036,"Government College of Engineering, Kolhapur",4,603661510,Mechanical & Automation Engineering,,,
+6145,"JSPMS Jaywantrao Sawant College of Engineering,Pune",1,614524510,Computer Engineering,90.74,85.25,90.29
+6145,"JSPMS Jaywantrao Sawant College of Engineering,Pune",1,614524610,Information Technology,90.19,84.86,90.11
+6145,"JSPMS Jaywantrao Sawant College of Engineering,Pune",1,614526310,Artificial Intelligence (AI) and Data Science,90.0,88.23,90.5
+6145,"JSPMS Jaywantrao Sawant College of Engineering,Pune",2,614524510,Computer Engineering,,,
+6145,"JSPMS Jaywantrao Sawant College of Engineering,Pune",2,614524610,Information Technology,,,
+6145,"JSPMS Jaywantrao Sawant College of Engineering,Pune",2,614526310,Artificial Intelligence (AI) and Data Science,,,
+6145,"JSPMS Jaywantrao Sawant College of Engineering,Pune",3,614524510,Computer Engineering,,,
+6145,"JSPMS Jaywantrao Sawant College of Engineering,Pune",3,614524610,Information Technology,,,
+6145,"JSPMS Jaywantrao Sawant College of Engineering,Pune",3,614526310,Artificial Intelligence (AI) and Data Science,,,
+6145,"JSPMS Jaywantrao Sawant College of Engineering,Pune",4,614524510,Computer Engineering,,,
+6145,"JSPMS Jaywantrao Sawant College of Engineering,Pune",4,614524610,Information Technology,,,
+6145,"JSPMS Jaywantrao Sawant College of Engineering,Pune",4,614526310,Artificial Intelligence (AI) and Data Science,,,
+6146,"MIT Academy of Engineering,Alandi, Pune",1,614624510,Computer Engineering,92.23,89.71,92.11
+6146,"MIT Academy of Engineering,Alandi, Pune",1,614624610,Information Technology,92.0,89.49,92.0
+6146,"MIT Academy of Engineering,Alandi, Pune",1,614691110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),91.83,90.33,91.66
+6146,"MIT Academy of Engineering,Alandi, Pune",1,614691210,Computer Science and Engineering(Data Science),91.74,88.29,91.13
+6146,"MIT Academy of Engineering,Alandi, Pune",1,614692710,Computer Engineering (Software Engineering),91.6,88.8,91.14
+6146,"MIT Academy of Engineering,Alandi, Pune",2,614624510,Computer Engineering,,,
+6146,"MIT Academy of Engineering,Alandi, Pune",2,614624610,Information Technology,,,
+6146,"MIT Academy of Engineering,Alandi, Pune",2,614691110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),,,
+6146,"MIT Academy of Engineering,Alandi, Pune",2,614691210,Computer Science and Engineering(Data Science),,,
+6146,"MIT Academy of Engineering,Alandi, Pune",2,614692710,Computer Engineering (Software Engineering),,,
+6146,"MIT Academy of Engineering,Alandi, Pune",3,614624510,Computer Engineering,,,
+6146,"MIT Academy of Engineering,Alandi, Pune",3,614624610,Information Technology,,,
+6146,"MIT Academy of Engineering,Alandi, Pune",3,614691110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),,,
+6146,"MIT Academy of Engineering,Alandi, Pune",3,614691210,Computer Science and Engineering(Data Science),,,
+6146,"MIT Academy of Engineering,Alandi, Pune",3,614692710,Computer Engineering (Software Engineering),,,
+6146,"MIT Academy of Engineering,Alandi, Pune",4,614624510,Computer Engineering,,,
+6146,"MIT Academy of Engineering,Alandi, Pune",4,614624610,Information Technology,,,
+6146,"MIT Academy of Engineering,Alandi, Pune",4,614691110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),,,
+6146,"MIT Academy of Engineering,Alandi, Pune",4,614691210,Computer Science and Engineering(Data Science),,,
+6146,"MIT Academy of Engineering,Alandi, Pune",4,614692710,Computer Engineering (Software Engineering),,,
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",1,617524510,Computer Engineering,94.63,94.0,94.51
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",1,617524590,Computer Engineering,94.29,92.71,94.29
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",1,617524610,Information Technology,94.24,93.31,94.06
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",1,617591110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),94.78,92.23,94.17
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",2,617524510,Computer Engineering,,,
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",2,617524590,Computer Engineering,,,
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",2,617524610,Information Technology,,,
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",2,617591110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),,,
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",3,617524510,Computer Engineering,,,
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",3,617524590,Computer Engineering,,,
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",3,617524610,Information Technology,,,
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",3,617591110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),,,
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",4,617524510,Computer Engineering,,,
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",4,617524590,Computer Engineering,,,
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",4,617524610,Information Technology,,,
+6175,"Pimpri Chinchwad Education Trust, Pimpri Chinchwad College of Engineering, Pune",4,617591110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),,,
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",1,620724510,Computer Engineering,93.0,90.29,92.87
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",1,620724610,Information Technology,92.59,90.29,92.56
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",1,620791610,Automation and Robotics,90.53,84.13,86.97
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",1,620799510,Artificial Intelligence and Data Science,92.29,89.17,92.28
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",2,620724510,Computer Engineering,,,
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",2,620724610,Information Technology,,,
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",2,620791610,Automation and Robotics,,,
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",2,620799510,Artificial Intelligence and Data Science,,,
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",3,620724510,Computer Engineering,,,
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",3,620724610,Information Technology,,,
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",3,620791610,Automation and Robotics,,,
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",3,620799510,Artificial Intelligence and Data Science,,,
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",4,620724510,Computer Engineering,,,
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",4,620724610,Information Technology,,,
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",4,620791610,Automation and Robotics,,,
+6207,"Dr. D. Y. Patil Unitech Societys Dr. D. Y. Patil Institute of Technology, Pimpri, Pune",4,620799510,Artificial Intelligence and Data Science,,,
+6250,"D.Y. Patil College of Engineering and Technology, Kolhapur",1,625024210,Computer Science and Engineering,90.83,88.97,90.34
+6250,"D.Y. Patil College of Engineering and Technology, Kolhapur",1,625091110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),89.89,85.49,89.71
+6250,"D.Y. Patil College of Engineering and Technology, Kolhapur",1,625091210,Computer Science and Engineering(Data Science),89.49,84.86,89.49
+6250,"D.Y. Patil College of Engineering and Technology, Kolhapur",2,625024210,Computer Science and Engineering,,,
+6250,"D.Y. Patil College of Engineering and Technology, Kolhapur",2,625091110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),,,
+6250,"D.Y. Patil College of Engineering and Technology, Kolhapur",2,625091210,Computer Science and Engineering(Data Science),,,
+6250,"D.Y. Patil College of Engineering and Technology, Kolhapur",3,625024210,Computer Science and Engineering,,,
+6250,"D.Y. Patil College of Engineering and Technology, Kolhapur",3,625091110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),,,
+6250,"D.Y. Patil College of Engineering and Technology, Kolhapur",3,625091210,Computer Science and Engineering(Data Science),,,
+6250,"D.Y. Patil College of Engineering and Technology, Kolhapur",4,625024210,Computer Science and Engineering,,,
+6250,"D.Y. Patil College of Engineering and Technology, Kolhapur",4,625091110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),,,
+6250,"D.Y. Patil College of Engineering and Technology, Kolhapur",4,625091210,Computer Science and Engineering(Data Science),,,
+6265,"Walchand Institute of Technology, Solapur",1,626524210,Computer Science and Engineering,92.38,,
+6265,"Walchand Institute of Technology, Solapur",1,626524610,Information Technology,91.37,,
+6265,"Walchand Institute of Technology, Solapur",1,626561510,Mechanical & Automation Engineering,81.49,,
+6265,"Walchand Institute of Technology, Solapur",1,626584410,Electronics and Computer Engineering,89.49,,
+6265,"Walchand Institute of Technology, Solapur",2,626524210,Computer Science and Engineering,,,
+6265,"Walchand Institute of Technology, Solapur",2,626524610,Information Technology,,,
+6265,"Walchand Institute of Technology, Solapur",2,626561510,Mechanical & Automation Engineering,,,
+6265,"Walchand Institute of Technology, Solapur",2,626584410,Electronics and Computer Engineering,,,
+6265,"Walchand Institute of Technology, Solapur",3,626524210,Computer Science and Engineering,,,
+6265,"Walchand Institute of Technology, Solapur",3,626524610,Information Technology,,,
+6265,"Walchand Institute of Technology, Solapur",3,626561510,Mechanical & Automation Engineering,,,
+6265,"Walchand Institute of Technology, Solapur",3,626584410,Electronics and Computer Engineering,,,
+6265,"Walchand Institute of Technology, Solapur",4,626524210,Computer Science and Engineering,,,
+6265,"Walchand Institute of Technology, Solapur",4,626524610,Information Technology,,,
+6265,"Walchand Institute of Technology, Solapur",4,626561510,Mechanical & Automation Engineering,,,
+6265,"Walchand Institute of Technology, Solapur",4,626584410,Electronics and Computer Engineering,,,
+6267,"Kolhapur Institute of Technology's College of Engineering(Autonomous), Kolhapur",1,626724210,Computer Science and Engineering,93.26,92.57,93.14
+6267,"Kolhapur Institute of Technology's College of Engineering(Autonomous), Kolhapur",1,626726210,Computer Science and Business Systems,90.34,88.29,90.27
+6267,"Kolhapur Institute of Technology's College of Engineering(Autonomous), Kolhapur",1,626791110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),92.06,90.67,91.66
+6267,"Kolhapur Institute of Technology's College of Engineering(Autonomous), Kolhapur",2,626724210,Computer Science and Engineering,,,
+6267,"Kolhapur Institute of Technology's College of Engineering(Autonomous), Kolhapur",2,626726210,Computer Science and Business Systems,,,
+6267,"Kolhapur Institute of Technology's College of Engineering(Autonomous), Kolhapur",2,626791110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),,,
+6267,"Kolhapur Institute of Technology's College of Engineering(Autonomous), Kolhapur",3,626724210,Computer Science and Engineering,,,
+6267,"Kolhapur Institute of Technology's College of Engineering(Autonomous), Kolhapur",3,626726210,Computer Science and Business Systems,,,
+6267,"Kolhapur Institute of Technology's College of Engineering(Autonomous), Kolhapur",3,626791110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),,,
+6267,"Kolhapur Institute of Technology's College of Engineering(Autonomous), Kolhapur",4,626724210,Computer Science and Engineering,,,
+6267,"Kolhapur Institute of Technology's College of Engineering(Autonomous), Kolhapur",4,626726210,Computer Science and Business Systems,,,
+6267,"Kolhapur Institute of Technology's College of Engineering(Autonomous), Kolhapur",4,626791110,Computer Science and Engineering(Artificial Intelligence and Machine Learning),,,
+6271,Pune Institute of Computer Technology,1,627124510,Computer Engineering,96.31,95.6,96.08
+6271,Pune Institute of Computer Technology,1,627124610,Information Technology,95.89,95.09,95.66
+6271,Pune Institute of Computer Technology,1,627126310,Artificial Intelligence (AI) and Data Science,95.83,95.24,95.6
+6271,Pune Institute of Computer Technology,1,627184410,Electronics and Computer Engineering,95.26,93.26,95.14
+6271,Pune Institute of Computer Technology,2,627124510,Computer Engineering,,,
+6271,Pune Institute of Computer Technology,2,627124610,Information Technology,,,
+6271,Pune Institute of Computer Technology,2,627126310,Artificial Intelligence (AI) and Data Science,,,
+6271,Pune Institute of Computer Technology,2,627184410,Electronics and Computer Engineering,,,
+6271,Pune Institute of Computer Technology,3,627124510,Computer Engineering,,,
+6271,Pune Institute of Computer Technology,3,627124610,Information Technology,,,
+6271,Pune Institute of Computer Technology,3,627126310,Artificial Intelligence (AI) and Data Science,,,
+6271,Pune Institute of Computer Technology,3,627184410,Electronics and Computer Engineering,,,
+6271,Pune Institute of Computer Technology,4,627124510,Computer Engineering,,,
+6271,Pune Institute of Computer Technology,4,627124610,Information Technology,,,
+6271,Pune Institute of Computer Technology,4,627126310,Artificial Intelligence (AI) and Data Science,,,
+6271,Pune Institute of Computer Technology,4,627184410,Electronics and Computer Engineering,,,
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",1,627221910,Robotics and Automation,90.19,86.69,89.83
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",1,627224510,Computer Engineering,93.71,92.34,93.44
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",1,627224610,Information Technology,93.2,91.83,92.75
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",1,627299510,Artificial Intelligence and Data Science,92.6,91.41,92.4
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",2,627221910,Robotics and Automation,,,
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",2,627224510,Computer Engineering,,,
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",2,627224610,Information Technology,,,
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",2,627299510,Artificial Intelligence and Data Science,,,
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",3,627221910,Robotics and Automation,,,
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",3,627224510,Computer Engineering,,,
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",3,627224610,Information Technology,,,
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",3,627299510,Artificial Intelligence and Data Science,,,
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",4,627221910,Robotics and Automation,,,
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",4,627224510,Computer Engineering,,,
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",4,627224610,Information Technology,,,
+6272,"Dr. D. Y. Patil Pratishthans D.Y.Patil College of Engineering Akurdi, Pune",4,627299510,Artificial Intelligence and Data Science,,,
+6754,"International Institute of Information Technology (I²IT), Pune.",1,675424510,Computer Engineering,91.77,90.4,91.66
+6754,"International Institute of Information Technology (I²IT), Pune.",1,675424610,Information Technology,91.49,88.97,91.37
+6754,"International Institute of Information Technology (I²IT), Pune.",2,675424510,Computer Engineering,,,
+6754,"International Institute of Information Technology (I²IT), Pune.",2,675424610,Information Technology,,,
+6754,"International Institute of Information Technology (I²IT), Pune.",3,675424510,Computer Engineering,,,
+6754,"International Institute of Information Technology (I²IT), Pune.",3,675424610,Information Technology,,,
+6754,"International Institute of Information Technology (I²IT), Pune.",4,675424510,Computer Engineering,,,
+6754,"International Institute of Information Technology (I²IT), Pune.",4,675424610,Information Technology,,,
+6755,"JSPM Narhe Technical Campus, Pune.",1,675524510,Computer Engineering,90.0,84.38,89.76
+6755,"JSPM Narhe Technical Campus, Pune.",1,675526310,Artificial Intelligence (AI) and Data Science,89.26,83.47,89.09
+6755,"JSPM Narhe Technical Campus, Pune.",2,675524510,Computer Engineering,,,
+6755,"JSPM Narhe Technical Campus, Pune.",2,675526310,Artificial Intelligence (AI) and Data Science,,,
+6755,"JSPM Narhe Technical Campus, Pune.",3,675524510,Computer Engineering,,,
+6755,"JSPM Narhe Technical Campus, Pune.",3,675526310,Artificial Intelligence (AI) and Data Science,,,
+6755,"JSPM Narhe Technical Campus, Pune.",4,675524510,Computer Engineering,,,
+6755,"JSPM Narhe Technical Campus, Pune.",4,675526310,Artificial Intelligence (AI) and Data Science,,,
+6780,"D.Y.Patil Education Societys,D.Y.Patil Technical Campus, Faculty of Engineering & Faculty of Management,Talsande,Kolhapur.",1,678024210,Computer Science and Engineering,87.19,82.57,86.63
+6780,"D.Y.Patil Education Societys,D.Y.Patil Technical Campus, Faculty of Engineering & Faculty of Management,Talsande,Kolhapur.",1,678091210,Computer Science and Engineering(Data Science),86.46,81.89,86.23
+6780,"D.Y.Patil Education Societys,D.Y.Patil Technical Campus, Faculty of Engineering & Faculty of Management,Talsande,Kolhapur.",2,678024210,Computer Science and Engineering,,,
+6780,"D.Y.Patil Education Societys,D.Y.Patil Technical Campus, Faculty of Engineering & Faculty of Management,Talsande,Kolhapur.",2,678091210,Computer Science and Engineering(Data Science),,,
+6780,"D.Y.Patil Education Societys,D.Y.Patil Technical Campus, Faculty of Engineering & Faculty of Management,Talsande,Kolhapur.",3,678024210,Computer Science and Engineering,,,
+6780,"D.Y.Patil Education Societys,D.Y.Patil Technical Campus, Faculty of Engineering & Faculty of Management,Talsande,Kolhapur.",3,678091210,Computer Science and Engineering(Data Science),,,
+6780,"D.Y.Patil Education Societys,D.Y.Patil Technical Campus, Faculty of Engineering & Faculty of Management,Talsande,Kolhapur.",4,678024210,Computer Science and Engineering,,,
+6780,"D.Y.Patil Education Societys,D.Y.Patil Technical Campus, Faculty of Engineering & Faculty of Management,Talsande,Kolhapur.",4,678091210,Computer Science and Engineering(Data Science),,,
+6839,"Dr. D Y Patil Pratishthans College of Engineering, Kolhapur",1,683924210,Computer Science and Engineering,87.61,79.49,87.09
+6839,"Dr. D Y Patil Pratishthans College of Engineering, Kolhapur",1,683991210,Computer Science and Engineering(Data Science),86.69,79.09,86.57
+6839,"Dr. D Y Patil Pratishthans College of Engineering, Kolhapur",2,683924210,Computer Science and Engineering,,,
+6839,"Dr. D Y Patil Pratishthans College of Engineering, Kolhapur",2,683991210,Computer Science and Engineering(Data Science),,,
+6839,"Dr. D Y Patil Pratishthans College of Engineering, Kolhapur",3,683924210,Computer Science and Engineering,,,
+6839,"Dr. D Y Patil Pratishthans College of Engineering, Kolhapur",3,683991210,Computer Science and Engineering(Data Science),,,
+6839,"Dr. D Y Patil Pratishthans College of Engineering, Kolhapur",4,683924210,Computer Science and Engineering,,,
+6839,"Dr. D Y Patil Pratishthans College of Engineering, Kolhapur",4,683991210,Computer Science and Engineering(Data Science),,,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",1,699124510,Computer Engineering,86.46,86.51,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",1,699156610,Computer Science,85.41,,84.86
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",1,699184410,Electronics and Computer Engineering,82.65,,82.17
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",1,699199510,Artificial Intelligence and Data Science,85.77,79.94,85.54
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",2,699124510,Computer Engineering,,,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",2,699156610,Computer Science,,,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",2,699184410,Electronics and Computer Engineering,,,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",2,699199510,Artificial Intelligence and Data Science,,,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",3,699124510,Computer Engineering,,,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",3,699156610,Computer Science,,,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",3,699184410,Electronics and Computer Engineering,,,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",3,699199510,Artificial Intelligence and Data Science,,,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",4,699124510,Computer Engineering,,,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",4,699156610,Computer Science,,,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",4,699184410,Electronics and Computer Engineering,,,
+6991,"Dr. D.Y. Patil Technical Campus, Varale, Talegaon, Pune",4,699199510,Artificial Intelligence and Data Science,,,
