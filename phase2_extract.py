@@ -49,12 +49,72 @@ CS_KEYWORDS = [
     "cs&bs",
 ]
 
-# Seat type groupings for cutoff categories
-SEAT_TYPE_GROUPS = {
-    "Open": ["GOPEN", "LOPEN"],
-    "EWS": ["EWS"],
-    "SEBC": ["GSEBC", "LSEBC"],
+# ---------------------------------------------------------------------------
+# All possible seat type groupings — master list
+# Each key is a cutoff category name, and its value lists the seat type codes
+# (as they appear in the PDFs after .upper()) that belong to that category.
+# ---------------------------------------------------------------------------
+ALL_SEAT_TYPE_GROUPS: dict[str, list[str]] = {
+    "Open":   ["GOPEN", "LOPEN"],
+    "OBC":    ["GOBC", "LOBC", "OBC"],
+    "EWS":    ["GEWS", "LEWS", "EWS"],
+    "SEBC":   ["GSEBC", "LSEBC"],
+    "SC":     ["GSC", "LSC", "SC"],
+    "ST":     ["GST", "LST", "ST"],
+    "VJ/DT":  ["GVJDTNTA", "GVJDTNTB", "GVJDTNTC", "GVJDTNTD",
+               "LVJDTNTA", "LVJDTNTB", "LVJDTNTC", "LVJDTNTD"],
+    "NT1":    ["GNT1", "LNT1", "NT1"],
+    "NT2":    ["GNT2", "LNT2", "NT2"],
+    "NT3":    ["GNT3", "LNT3", "NT3"],
+    "TFWS":   ["TFWS"],
 }
+
+
+def prompt_categories(
+    all_groups: dict[str, list[str]] | None = None,
+) -> list[str]:
+    """
+    Display all available categories and let the user pick which ones
+    to include.  Press Enter with no input to select all.
+
+    Returns a list of selected category names (keys of ALL_SEAT_TYPE_GROUPS).
+    """
+    groups = all_groups or ALL_SEAT_TYPE_GROUPS
+    names = list(groups.keys())
+
+    print("\n[Phase 2] Available cutoff categories:")
+    for i, name in enumerate(names, 1):
+        seat_codes = ", ".join(groups[name])
+        print(f"  {i:>2}. {name:<8}  (seat types: {seat_codes})")
+
+    print(
+        f"\nEnter category numbers separated by commas (e.g. 1,2,3),\n"
+        f"or press Enter to select ALL:"
+    )
+    user_input = input(">>> ").strip()
+
+    if not user_input:
+        selected = names
+    else:
+        selected = []
+        for part in user_input.split(","):
+            part = part.strip()
+            try:
+                idx = int(part) - 1
+                if 0 <= idx < len(names):
+                    selected.append(names[idx])
+                else:
+                    print(f"  ⚠ Ignoring invalid number: {part}")
+            except ValueError:
+                print(f"  ⚠ Ignoring invalid input: {part}")
+
+    if not selected:
+        print("  No valid selection — defaulting to ALL categories.")
+        selected = names
+
+    print(f"[Phase 2] Selected categories: {', '.join(selected)}\n")
+    return selected
+
 
 # ---------------------------------------------------------------------------
 # LLM Setup (lazy init)
@@ -152,12 +212,15 @@ def is_cs_related(branch_name: str) -> bool:
     return result
 
 
-def extract_cutoffs_from_pdf(pdf_path: Path) -> list[dict]:
+def extract_cutoffs_from_pdf(
+    pdf_path: Path,
+    seat_type_groups: dict[str, list[str]],
+) -> list[dict]:
     """
     Extract cutoff data from a single CAP round PDF.
 
     Returns a list of dicts with:
-        branch_code, branch_name, seat_type -> min_marks
+        branch_code, branch_name, cutoffs (dict of category -> min_marks)
     """
     results: list[dict] = []
 
@@ -226,9 +289,9 @@ def extract_cutoffs_from_pdf(pdf_path: Path) -> list[dict]:
                     except (ValueError, IndexError):
                         continue
 
-                # Compute cutoffs per category
+                # Compute cutoffs per category (only for selected categories)
                 cutoffs: dict[str, float | None] = {}
-                for category, seat_types in SEAT_TYPE_GROUPS.items():
+                for category, seat_types in seat_type_groups.items():
                     all_marks: list[float] = []
                     for st in seat_types:
                         all_marks.extend(seat_marks.get(st, []))
@@ -249,12 +312,32 @@ def extract_cutoffs_from_pdf(pdf_path: Path) -> list[dict]:
     return results
 
 
-def run_phase2() -> Path:
+def run_phase2(categories: list[str] | None = None) -> Path:
     """
     Main entry point for Phase 2.
 
+    Args:
+        categories: List of category names to extract. If None, the user
+                    will be prompted to choose interactively.
+
     Returns the path to the generated cutoffs_raw.csv.
     """
+    # Determine which categories to extract
+    if categories is None:
+        categories = prompt_categories()
+
+    # Build the seat type groups dict for only the selected categories
+    seat_type_groups = {
+        cat: ALL_SEAT_TYPE_GROUPS[cat]
+        for cat in categories
+        if cat in ALL_SEAT_TYPE_GROUPS
+    }
+
+    if not seat_type_groups:
+        raise ValueError("No valid categories selected!")
+
+    print(f"[Phase 2] Extracting cutoffs for: {', '.join(seat_type_groups.keys())}")
+
     # Load college info
     colleges: list[dict] = []
     with open(COLLEGES_CSV, newline="") as f:
@@ -262,7 +345,9 @@ def run_phase2() -> Path:
         for row in reader:
             colleges.append(row)
 
-    print(f"[Phase 2] Processing {len(colleges)} colleges × {len(CAP_ROUNDS)} CAP rounds")
+    print(
+        f"[Phase 2] Processing {len(colleges)} colleges × {len(CAP_ROUNDS)} CAP rounds"
+    )
 
     all_cutoffs: list[dict] = []
 
@@ -278,37 +363,36 @@ def run_phase2() -> Path:
                 print(f"  CAP {cap_round}: PDF not found, skipping")
                 continue
 
-            branches = extract_cutoffs_from_pdf(pdf_path)
-            print(
-                f"  CAP {cap_round}: Found {len(branches)} CS-related branch(es)"
-            )
+            branches = extract_cutoffs_from_pdf(pdf_path, seat_type_groups)
+            print(f"  CAP {cap_round}: Found {len(branches)} CS-related branch(es)")
 
             for branch in branches:
                 cutoffs = branch["cutoffs"]
-                all_cutoffs.append(
-                    {
-                        "college_code": code,
-                        "college_name": name,
-                        "cap_round": cap_round,
-                        "branch_code": branch["branch_code"],
-                        "branch_name": branch["branch_name"],
-                        "cutoff_open": cutoffs.get("Open"),
-                        "cutoff_ews": cutoffs.get("EWS"),
-                        "cutoff_sebc": cutoffs.get("SEBC"),
-                    }
-                )
+                row_data = {
+                    "college_code": code,
+                    "college_name": name,
+                    "cap_round": cap_round,
+                    "branch_code": branch["branch_code"],
+                    "branch_name": branch["branch_name"],
+                }
+                # Dynamically add cutoff columns for each selected category
+                for cat in seat_type_groups:
+                    row_data[f"cutoff_{cat.lower()}"] = cutoffs.get(cat)
 
-    # Save to CSV
+                all_cutoffs.append(row_data)
+
+    # Build fieldnames dynamically
     fieldnames = [
         "college_code",
         "college_name",
         "cap_round",
         "branch_code",
         "branch_name",
-        "cutoff_open",
-        "cutoff_ews",
-        "cutoff_sebc",
     ]
+    for cat in seat_type_groups:
+        fieldnames.append(f"cutoff_{cat.lower()}")
+
+    # Save to CSV
     with open(CUTOFFS_CSV, "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()

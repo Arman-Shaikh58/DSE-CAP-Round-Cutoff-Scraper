@@ -29,6 +29,11 @@ def main():
         print(f"\n❌ Phase 1 failed: {e}")
         sys.exit(1)
 
+    # ---- Category selection (shared by Phase 2 & 3) ----
+    from phase2_extract import prompt_categories
+
+    selected_categories = prompt_categories()
+
     # ---- Phase 2 ----
     print("\n" + "─" * 70)
     print("  PHASE 2: Extracting cutoffs from PDFs")
@@ -36,7 +41,7 @@ def main():
     from phase2_extract import run_phase2
 
     try:
-        cutoffs_csv = run_phase2()
+        cutoffs_csv = run_phase2(categories=selected_categories)
     except Exception as e:
         print(f"\n❌ Phase 2 failed: {e}")
         sys.exit(1)

@@ -3,10 +3,11 @@ Phase 3: Generate a styled Excel report from the extracted cutoff data.
 
 Reads cutoffs_raw.csv and creates dse_cutoffs_2025.xlsx with
 college code, name, branch code, branch name, and cutoffs
-for Open/EWS/SEBC across all 4 CAP rounds.
+across all 4 CAP rounds. Categories are auto-detected from the CSV header.
 """
 
 import csv
+import re
 from pathlib import Path
 
 from openpyxl import Workbook
@@ -21,12 +22,37 @@ CUTOFFS_CSV = BASE_DIR / "cutoffs_raw.csv"
 OUTPUT_XLSX = BASE_DIR / "dse_cutoffs_2025.xlsx"
 
 CAP_ROUNDS = [1, 2, 3, 4]
-CATEGORIES = ["Open", "EWS", "SEBC"]
 
 
-def run_phase3() -> Path:
+def detect_categories_from_csv(csv_path: Path) -> list[str]:
+    """
+    Read the CSV header and extract category names from columns
+    matching the pattern 'cutoff_<category>'.
+
+    Returns category names in title case (e.g. ['Open', 'Ews', 'Sebc']).
+    """
+    with open(csv_path, newline="") as f:
+        reader = csv.reader(f)
+        header = next(reader)
+
+    categories = []
+    for col in header:
+        match = re.match(r"cutoff_(.+)", col)
+        if match:
+            # Convert back to display name (e.g. "open" -> "Open", "vj/dt" -> "Vj/Dt")
+            raw = match.group(1)
+            categories.append(raw)
+
+    return categories
+
+
+def run_phase3(categories: list[str] | None = None) -> Path:
     """
     Main entry point for Phase 3.
+
+    Args:
+        categories: List of category keys (lowercase, matching CSV columns).
+                    If None, auto-detected from the CSV header.
 
     Returns the path to the generated Excel file.
     """
@@ -38,6 +64,21 @@ def run_phase3() -> Path:
             records.append(row)
 
     print(f"[Phase 3] Loaded {len(records)} cutoff records from {CUTOFFS_CSV}")
+
+    # Auto-detect categories from CSV if not provided
+    if categories is None:
+        categories = detect_categories_from_csv(CUTOFFS_CSV)
+
+    if not categories:
+        raise ValueError("No cutoff categories found in CSV header!")
+
+    # Build display names (for Excel headers)
+    # e.g. "open" -> "Open", "vj/dt" -> "VJ/DT", "ews" -> "EWS"
+    display_names: dict[str, str] = {}
+    for cat in categories:
+        display_names[cat] = cat.upper() if len(cat) <= 4 else cat.title()
+
+    print(f"[Phase 3] Categories: {', '.join(display_names[c] for c in categories)}")
 
     # Pivot data: group by (college_code, college_name, branch_code, branch_name)
     # and spread cap rounds into columns
@@ -54,9 +95,9 @@ def run_phase3() -> Path:
         if key not in pivot:
             pivot[key] = {}
 
-        for cat in CATEGORIES:
-            col_key = f"cap{cap_round}_{cat.lower()}"
-            val = rec.get(f"cutoff_{cat.lower()}", "")
+        for cat in categories:
+            col_key = f"cap{cap_round}_{cat}"
+            val = rec.get(f"cutoff_{cat}", "")
             pivot[key][col_key] = val if val else "-"
 
     print(f"[Phase 3] {len(pivot)} unique college-branch combinations")
@@ -70,8 +111,12 @@ def run_phase3() -> Path:
     # Styles
     # -----------------------------------------------------------------------
     header_font = Font(name="Calibri", bold=True, size=11, color="FFFFFF")
-    header_fill = PatternFill(start_color="2F5496", end_color="2F5496", fill_type="solid")
-    subheader_fill = PatternFill(start_color="4472C4", end_color="4472C4", fill_type="solid")
+    header_fill = PatternFill(
+        start_color="2F5496", end_color="2F5496", fill_type="solid"
+    )
+    subheader_fill = PatternFill(
+        start_color="4472C4", end_color="4472C4", fill_type="solid"
+    )
     subheader_font = Font(name="Calibri", bold=True, size=10, color="FFFFFF")
 
     data_font = Font(name="Calibri", size=10)
@@ -119,15 +164,15 @@ def run_phase3() -> Path:
             start_row=1,
             start_column=col,
             end_row=1,
-            end_column=col + len(CATEGORIES) - 1,
+            end_column=col + len(categories) - 1,
         )
-        col += len(CATEGORIES)
+        col += len(categories)
 
-    # Row 2: Sub-headers (Open, EWS, SEBC for each round)
+    # Row 2: Sub-headers (category names for each round)
     col = len(base_cols) + 1
     for _cap_round in CAP_ROUNDS:
-        for cat in CATEGORIES:
-            cell = ws.cell(row=2, column=col, value=cat)
+        for cat in categories:
+            cell = ws.cell(row=2, column=col, value=display_names[cat])
             cell.font = subheader_font
             cell.fill = subheader_fill
             cell.border = thin_border
@@ -158,16 +203,15 @@ def run_phase3() -> Path:
         # Cutoff columns
         col = len(base_cols) + 1
         for cap_round in CAP_ROUNDS:
-            for cat in CATEGORIES:
-                col_key = f"cap{cap_round}_{cat.lower()}"
+            for cat in categories:
+                col_key = f"cap{cap_round}_{cat}"
                 raw_val = data.get(col_key, "-")
 
                 # Convert to number if possible
                 try:
                     val = float(raw_val)
                     cell = ws.cell(row=row_num, column=col, value=val)
-                    cell.number_format = "0.00%"  # Display as percentage
-                    # Actually, the values are like 94.11, not 0.9411
+                    # Values are like 94.11, not 0.9411
                     cell.number_format = "0.00"
                     cell.font = number_font
                 except (ValueError, TypeError):
@@ -185,15 +229,15 @@ def run_phase3() -> Path:
     # Auto-fit column widths
     # -----------------------------------------------------------------------
     col_widths = {
-        1: 14,   # College Code
-        2: 55,   # College Name
-        3: 14,   # Branch Code
-        4: 40,   # Branch Name
+        1: 14,  # College Code
+        2: 55,  # College Name
+        3: 14,  # Branch Code
+        4: 40,  # Branch Name
     }
     # Cutoff columns
     col = len(base_cols) + 1
     for _ in CAP_ROUNDS:
-        for _ in CATEGORIES:
+        for _ in categories:
             col_widths[col] = 10
             col += 1
 
@@ -207,7 +251,7 @@ def run_phase3() -> Path:
     # Title row at the very top (insert above)
     # -----------------------------------------------------------------------
     ws.insert_rows(1)
-    total_cols = len(base_cols) + len(CAP_ROUNDS) * len(CATEGORIES)
+    total_cols = len(base_cols) + len(CAP_ROUNDS) * len(categories)
     title_cell = ws.cell(
         row=1,
         column=1,
